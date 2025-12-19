@@ -176,3 +176,18 @@ const messages = [
   "You are my little sunshine 🌞",
 ];
 
+
+const touchMoon = document.getElementById("touchMoon");
+const moonMessage = document.getElementById("moonMessage");
+
+touchMoon.addEventListener("click", () => {
+  // pick a random message from your existing messages array
+  const msg = messages[Math.floor(Math.random() * messages.length)];
+  moonMessage.textContent = msg;
+  moonMessage.style.opacity = 1;
+
+  // keep the message visible longer: 5 seconds
+  setTimeout(() => {
+    moonMessage.style.opacity = 0;
+  }, 5000);
+});
