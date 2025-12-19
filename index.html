@@ -1,49 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>For You ❤️</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Moon's Birthday Countdown</title>
 
-<link rel="stylesheet" href="style.css">
-<link rel="manifest" href="manifest.json">
+  <!-- iPhone Home Screen -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Moon's Birthday">
+  <link rel="apple-touch-icon" sizes="180x180" href="icon.png">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<!-- LOADER -->
-<div id="loader">
-  <div class="heart">❤️</div>
-  <div class="loader-text">Preparing something special…</div>
-</div>
+  <!-- Countdown Screen -->
+  <div id="countdownScreen">
+    <h1 class="title">🌙 Moon's Birthday Countdown 🌙</h1>
+    <div class="timer">
+      <div class="box">
+        <div class="value" id="days">0</div>
+        <div class="label">Days</div>
+      </div>
+      <div class="box">
+        <div class="value" id="hours">0</div>
+        <div class="label">Hours</div>
+      </div>
+      <div class="box">
+        <div class="value" id="minutes">0</div>
+        <div class="label">Minutes</div>
+      </div>
+      <div class="box">
+        <div class="value" id="seconds">0</div>
+        <div class="label">Seconds</div>
+      </div>
+    </div>
 
-<!-- COUNTDOWN -->
-<section id="countdownScreen">
-  <h1 class="title">Counting down to Nilaa's special day ✨</h1>
+    <!-- Daily Activity Buttons -->
+    <div id="dailyActivity" class="daily-activity">
+      <h2>🎁 Daily Surprises</h2>
+      <div id="buttonsContainer"></div>
+    </div>
+    <div id="activityMessage" class="activity-message"></div>
 
-  <div class="timer">
-    <div class="box"><div id="d" class="value">00</div><div class="label">DAYS</div><div class="emoji">📅</div></div>
-    <div class="box"><div id="h" class="value">00</div><div class="label">HOURS</div><div class="emoji">⏰</div></div>
-    <div class="box"><div id="m" class="value">00</div><div class="label">MINUTES</div><div class="emoji">⌛</div></div>
-    <div class="box"><div id="s" class="value">00</div><div class="label">SECONDS</div><div class="emoji">✨</div></div>
+    <!-- Floating bubbles container -->
+    <div id="bubbles"></div>
   </div>
-</section>
 
-<!-- REVEAL -->
-<section id="revealScreen">
-  <div class="blast">
-    <div class="msg">🎉 Happy Birthday 🎉</div>
-    <div class="msg">You make my world brighter</div>
-    <div class="msg">This day is all about YOU ❤️</div>
+  <!-- Birthday Reveal Screen -->
+  <div id="revealScreen">
+    <h1 class="msg blast">🎉 Happy Birthday Moon! 🎉</h1>
+    <p class="msg">You are beautiful, precious, and lovable 💛</p>
+    <p class="msg">May your day sparkle like the moon 🌙✨</p>
   </div>
-</section>
 
-<!-- MUSIC -->
-<audio id="bgMusic" loop playsinline>
-  <source src="assets/music.mp3" type="audio/mpeg">
-</audio>
-
-
-<script src="script.js"></script>
+  <!-- JS -->
+  <script src="script.js"></script>
 </body>
 </html>
