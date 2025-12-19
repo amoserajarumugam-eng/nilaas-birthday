@@ -104,14 +104,14 @@ let startY = 0;
 document.addEventListener("touchstart", (e) => {
   startY = e.touches[0].clientY;
 });
-
+/*
 document.addEventListener("touchend", (e) => {
   const endY = e.changedTouches[0].clientY;
   if (startY - endY > 80) {
     countdownScreen.style.display = "none";
     revealScreen.style.display = "flex";
   }
-});
+});*/
 
 if ('serviceWorker' in navigator) {
   navigator.serviceWorker.register('service-worker.js');
@@ -133,3 +133,5 @@ document.addEventListener("touchend", (e) => {
   // Previously, this would show revealScreen on swipe up
   // Now, no action is taken
 });
+
+
