@@ -116,3 +116,20 @@ document.addEventListener("touchend", (e) => {
 if ('serviceWorker' in navigator) {
   navigator.serviceWorker.register('service-worker.js');
 }
+
+/* ================================
+   DISABLE SWIPE-UP TO REVEAL
+================================ */
+let startY = 0;
+
+document.addEventListener("touchstart", (e) => {
+  startY = e.touches[0].clientY;
+});
+
+document.addEventListener("touchend", (e) => {
+  const endY = e.changedTouches[0].clientY;
+
+  // BLOCK swipe-up reveal: do nothing
+  // Previously, this would show revealScreen on swipe up
+  // Now, no action is taken
+});
