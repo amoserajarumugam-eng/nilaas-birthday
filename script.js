@@ -1,7 +1,7 @@
 /* ================================
    CONFIGURATION
 ================================ */
-const TEST_MODE = true; // change to false on real birthday
+const TEST_MODE = false; // change to false on real birthday
 let birthdayDate;
 
 if (TEST_MODE) {
@@ -116,3 +116,4 @@ document.addEventListener("touchend", (e) => {
 if ('serviceWorker' in navigator) {
   navigator.serviceWorker.register('service-worker.js');
 }
+
