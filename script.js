@@ -135,36 +135,6 @@ document.addEventListener("touchend", (e) => {
   // Now, no action is taken
 });
 
-/* ================================
-   BUBBLE BUTTON MESSAGE
-================================ */
-const bubbleButton = document.getElementById("bubbleButton");
-const bubbleMessage = document.getElementById("bubbleMessage");
-
-const messages = [
-  "Hello Moon 🌙, you are precious!",
-  "You make the world brighter 💛",
-  "Keep smiling, lovely Moon 😄",
-  "A playful hug just for you 🤗",
-  "Shine bright like the stars ✨"
-];
-
-bubbleButton.addEventListener("click", () => {
-  // Bubble burst animation
-  bubbleButton.classList.add("bubbleBurst");
-  
-  // Pick random message
-  const msg = messages[Math.floor(Math.random() * messages.length)];
-  bubbleMessage.textContent = msg;
-  bubbleMessage.style.opacity = 1;
-
-  // Remove burst animation after done
-  setTimeout(() => {
-    bubbleButton.classList.remove("bubbleBurst");
-    bubbleMessage.style.opacity = 0;
-  }, 600);
-});
-
 // Function to initialize Moon button
 function initMoonButton() {
   const touchMoon = document.getElementById("touchMoon");
@@ -205,3 +175,4 @@ const messages = [
   "Every day is brighter with you around 💛",
   "You are my little sunshine 🌞",
 ];
+
