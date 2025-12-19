@@ -53,7 +53,7 @@ function createHeart() {
 }
 
 // spawn hearts every 0.5s
-setInterval(createHeart, 500);
+setInterval(createHeart, 1500);
 
 
 /* ================================
@@ -164,3 +164,4 @@ bubbleButton.addEventListener("click", () => {
     bubbleMessage.style.opacity = 0;
   }, 600);
 });
+
