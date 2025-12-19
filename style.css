@@ -178,7 +178,7 @@ body.night {
 
 #moonMessage {
   position: absolute;
-  bottom: 150px; /* adjust so above cake, below timer */
+  bottom: 200px; /* adjust so above cake, below timer */
   left: 50%;
   transform: translateX(-50%);
   color: gold;
@@ -193,7 +193,7 @@ body.night {
 /* mobile adjustment */
 @media (max-width: 480px) {
   #moonMessage {
-    bottom: 100px; /* slightly lower for small screens */
+    bottom: 150px; /* slightly lower for small screens */
     font-size: 1rem;
   }
 }
@@ -218,6 +218,7 @@ body.night {
 #touchMoon:active {
   transform: translateX(-50%) scale(1.3);
 }
+
 
 
 
