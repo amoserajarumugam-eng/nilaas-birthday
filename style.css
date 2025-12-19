@@ -178,7 +178,7 @@ body.night {
 
 #moonMessage {
   position: absolute;
-  bottom: 120px; /* adjust so above cake, below timer */
+  bottom: 150px; /* adjust so above cake, below timer */
   left: 50%;
   transform: translateX(-50%);
   color: gold;
@@ -218,6 +218,7 @@ body.night {
 #touchMoon:active {
   transform: translateX(-50%) scale(1.3);
 }
+
 
 
 
