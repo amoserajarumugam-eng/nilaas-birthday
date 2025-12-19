@@ -24,10 +24,6 @@ const hEl = document.getElementById("h");
 const mEl = document.getElementById("m");
 const sEl = document.getElementById("s");
 
-const buttonsContainer = document.getElementById("buttonsContainer");
-const activityMessage = document.getElementById("activityMessage");
-const bubblesContainer = document.getElementById("bubbles");
-
 /* ================================
    LOADER HANDLING
 ================================ */
@@ -50,75 +46,15 @@ function createHeart() {
   heart.className = "heart";
   heart.textContent = "💛";
   heart.style.left = Math.random() * 100 + "vw";
-  heart.style.fontSize = (12 + Math.random() * 10) + "px";
-  heart.style.animationDuration = (6 + Math.random() * 4) + "s";
+  heart.style.fontSize = (12 + Math.random()*10) + "px";
+  heart.style.animationDuration = (6 + Math.random()*4) + "s";
   document.body.appendChild(heart);
   setTimeout(() => heart.remove(), 10000);
 }
+
+// spawn hearts every 0.5s
 setInterval(createHeart, 500);
 
-/* ================================
-   DAILY ACTIVITY MESSAGES
-================================ */
-const messages = {
-  1: "Good morning, Moon 🌙! Smile bright today 💛",
-  2: "You're amazing, precious Moon 🌸",
-  3: "A little sparkle for you ✨",
-  4: "Sending moonlight your way 🌙",
-  5: "Keep shining, beautiful 💖",
-  6: "Today's your special daily surprise 🎁",
-  7: "Moon, you're lovable and magical 🌟",
-  8: "Remember to have fun and laugh 😄",
-  9: "A playful hug from afar 🤗",
-  10: "Moonlight vibes only 🌙✨",
-  11: "You are the star of today ⭐",
-  12: "A little note: You're incredible 💌",
-  13: "Moon, you make the world brighter 🌸",
-  14: "Shine on, beautiful Moon 💛",
-  15: "Tiny joys make big smiles 😊",
-  16: "Moon, you're playful and lovable 💖",
-  17: "Keep sparkling today ✨",
-  18: "Moonlight kisses 😘",
-  19: "You are precious beyond words 💛",
-  20: "Today is full of joy 🌸",
-  21: "A small surprise for you 🎁",
-  22: "Moon, you shine so bright 🌟",
-  23: "Happiness looks good on you 😄",
-  24: "Playful moonlight magic 🌙✨",
-  25: "Your day is special, Moon 💖",
-  26: "Keep dreaming and smiling 🌸",
-  27: "A note to say you're amazing 💌",
-  28: "Shine like the moon tonight 🌙",
-  29: "Lovely Moon, enjoy your day 💛",
-  30: "Final daily surprise: love & joy 💖"
-};
-
-// Create buttons dynamically for 30 days
-for (let day = 1; day <= 30; day++) {
-  const btn = document.createElement("button");
-  btn.textContent = `Day ${day}`;
-  btn.onclick = () => showMessage(day);
-  buttonsContainer.appendChild(btn);
-}
-
-// Show daily message with bubble
-function showMessage(day) {
-  if (messages[day]) {
-    activityMessage.textContent = messages[day];
-    activityMessage.style.display = "block";
-    activityMessage.style.animation = "fadeUp 0.8s";
-    createBubble();
-  }
-}
-
-// Create bubble effect
-function createBubble() {
-  const bubble = document.createElement("div");
-  bubble.classList.add("bubble");
-  bubble.style.left = Math.random() * 90 + "vw";
-  bubblesContainer.appendChild(bubble);
-  setTimeout(() => bubble.remove(), 2000);
-}
 
 /* ================================
    COUNTDOWN TIMER
@@ -131,12 +67,13 @@ function updateTimer() {
     countdownScreen.style.display = "none";
     revealScreen.style.display = "flex";
 
-    // play music
+    // play music (mobile-safe)
     if (music) {
       music.volume = 0.6;
       music.play().catch(() => {});
     }
 
+    // mobile vibration
     if (navigator.vibrate) {
       navigator.vibrate([200, 100, 200]);
     }
@@ -160,9 +97,8 @@ setInterval(updateTimer, 1000);
 updateTimer();
 
 /* ================================
-   SWIPE UP TO REVEAL FIXED
+   SWIPE UP TO REVEAL (MOBILE)
 ================================ */
-// Only allow reveal if timer is 0
 let startY = 0;
 
 document.addEventListener("touchstart", (e) => {
@@ -171,13 +107,12 @@ document.addEventListener("touchstart", (e) => {
 
 document.addEventListener("touchend", (e) => {
   const endY = e.changedTouches[0].clientY;
-  const now = new Date();
-  if (birthdayDate - now <= 0 && startY - endY > 80) {
+  if (startY - endY > 80) {
     countdownScreen.style.display = "none";
     revealScreen.style.display = "flex";
   }
 });
 
-if ("serviceWorker" in navigator) {
-  navigator.serviceWorker.register("service-worker.js");
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('service-worker.js');
 }
