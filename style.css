@@ -212,3 +212,23 @@ body.night {
   opacity: 0;
   transition: opacity 0.5s;
 }
+
+#touchMoon {
+  position: fixed;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 4rem; /* adjust size */
+  cursor: pointer;
+  animation: pulseMoon 1.2s infinite;
+  z-index: 15;
+}
+
+@keyframes pulseMoon {
+  0%, 100% { transform: translateX(-50%) scale(1); }
+  50% { transform: translateX(-50%) scale(1.2); }
+}
+
+#touchMoon:active {
+  transform: translateX(-50%) scale(1.3);
+}
