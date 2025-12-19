@@ -178,16 +178,24 @@ body.night {
 
 #moonMessage {
   position: absolute;
-  bottom: 180px; /* adjust based on cake position */
+  bottom: 120px; /* adjust so above cake, below timer */
   left: 50%;
   transform: translateX(-50%);
   color: gold;
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   text-align: center;
   opacity: 0;
   transition: opacity 0.3s;
-  pointer-events: none; /* so it doesn’t block clicks */
+  pointer-events: none;
   z-index: 20;
+}
+
+/* mobile adjustment */
+@media (max-width: 480px) {
+  #moonMessage {
+    bottom: 100px; /* slightly lower for small screens */
+    font-size: 1rem;
+  }
 }
 
 #touchMoon {
@@ -201,6 +209,7 @@ body.night {
   z-index: 15;
 }
 
+
 @keyframes pulseMoon {
   0%, 100% { transform: translateX(-50%) scale(1); }
   50% { transform: translateX(-50%) scale(1.2); }
@@ -209,5 +218,6 @@ body.night {
 #touchMoon:active {
   transform: translateX(-50%) scale(1.3);
 }
+
 
 
