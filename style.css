@@ -176,41 +176,18 @@ body.night {
   transform: scale(0.96);
 }
 
-#bubbleContainer {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  z-index: 20;
-  text-align: center;
-}
-
-#bubbleButton {
-  font-size: 3rem;
-  cursor: pointer;
-  user-select: none;
-  transition: transform 0.3s;
-}
-
-#bubbleButton:active {
-  transform: scale(1.2);
-}
-
-.bubbleBurst {
-  animation: burst 0.6s ease forwards;
-}
-
-@keyframes burst {
-  0% { transform: scale(1); opacity: 1; }
-  50% { transform: scale(2); opacity: 0.7; }
-  100% { transform: scale(0); opacity: 0; }
-}
-
-#bubbleMessage {
-  margin-top: 10px;
+#moonMessage {
+  position: absolute;
+  bottom: 180px; /* adjust based on cake position */
+  left: 50%;
+  transform: translateX(-50%);
   color: gold;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
+  text-align: center;
   opacity: 0;
-  transition: opacity 0.5s;
+  transition: opacity 0.3s;
+  pointer-events: none; /* so it doesn’t block clicks */
+  z-index: 20;
 }
 
 #touchMoon {
@@ -218,7 +195,7 @@ body.night {
   bottom: 40px;
   left: 50%;
   transform: translateX(-50%);
-  font-size: 4rem; /* adjust size */
+  font-size: 4rem;
   cursor: pointer;
   animation: pulseMoon 1.2s infinite;
   z-index: 15;
@@ -232,3 +209,5 @@ body.night {
 #touchMoon:active {
   transform: translateX(-50%) scale(1.3);
 }
+
+
