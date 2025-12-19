@@ -189,3 +189,19 @@ setTimeout(() => {
   // Initialize Moon button here
   initMoonButton();
 }, 1000);
+
+const messages = [
+  "Hello Moon 🌙, you are precious!",
+  "You make the world brighter 💛",
+  "Keep smiling, lovely Moon 😄",
+  "Shine bright like the stars ✨",
+  "Moon, you light up my day 🌟",
+  "Sending you a little magical sparkle ✨",
+  "You are amazing just the way you are 💖",
+  "Smile, Moon! The world loves you 😄",
+  "A tiny elephant says hi 🐘💌",
+  "Your laughter is contagious 😍",
+  "Keep shining, playful Moon 🌙",
+  "Every day is brighter with you around 💛",
+  "You are my little sunshine 🌞",
+];
