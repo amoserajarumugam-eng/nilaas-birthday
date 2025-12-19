@@ -165,3 +165,27 @@ bubbleButton.addEventListener("click", () => {
   }, 600);
 });
 
+// Function to initialize Moon button
+function initMoonButton() {
+  const touchMoon = document.getElementById("touchMoon");
+  const moonMessage = document.getElementById("moonMessage");
+
+  touchMoon.addEventListener("click", () => {
+    const msg = messages[Math.floor(Math.random() * messages.length)];
+    moonMessage.textContent = msg;
+    moonMessage.style.opacity = 1;
+
+    setTimeout(() => {
+      moonMessage.style.opacity = 0;
+    }, 3000);
+  });
+}
+
+// Call after loader hides
+setTimeout(() => {
+  loader.style.display = "none";
+  countdownScreen.style.display = "block";
+
+  // Initialize Moon button here
+  initMoonButton();
+}, 1000);
