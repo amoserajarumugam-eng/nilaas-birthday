@@ -199,8 +199,9 @@ touchMoon.addEventListener("click", () => {
   messageTimeout = setTimeout(() => {
     moonMessage.style.opacity = "0";
     messageTimeout = null;
-  }, 5000); // visible for 5 seconds
+  }, 7000); // visible for 5 seconds
 });
+
 
 
 
