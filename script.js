@@ -179,15 +179,22 @@ const messages = [
 
 const touchMoon = document.getElementById("touchMoon");
 const moonMessage = document.getElementById("moonMessage");
-
+let messageTimeout;
 touchMoon.addEventListener("click", () => {
   // pick a random message from your existing messages array
   const msg = messages[Math.floor(Math.random() * messages.length)];
   moonMessage.textContent = msg;
   moonMessage.style.opacity = 1;
 
+   // Clear any existing timeout to prevent early hiding
+  if (messageTimeout) {
+    clearTimeout(messageTimeout);
+  }
+   
   // keep the message visible longer: 5 seconds
   setTimeout(() => {
     moonMessage.style.opacity = 0;
+    messageTimeout = null; // reset
   }, 5000);
 });
+
