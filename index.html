@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For You ❤️</title>
+
+<link rel="stylesheet" href="style.css">
+<link rel="manifest" href="manifest.json">
+</head>
+
+<body>
+
+<!-- LOADER -->
+<div id="loader">
+  <div class="heart">❤️</div>
+  <div class="loader-text">Preparing something special…</div>
+</div>
+
+<!-- COUNTDOWN -->
+<section id="countdownScreen">
+  <h1 class="title">Counting down to Nilaa's special day ✨</h1>
+
+  <div class="timer">
+    <div class="box"><div id="d" class="value">00</div><div class="label">DAYS</div><div class="emoji">📅</div></div>
+    <div class="box"><div id="h" class="value">00</div><div class="label">HOURS</div><div class="emoji">⏰</div></div>
+    <div class="box"><div id="m" class="value">00</div><div class="label">MINUTES</div><div class="emoji">⌛</div></div>
+    <div class="box"><div id="s" class="value">00</div><div class="label">SECONDS</div><div class="emoji">✨</div></div>
+  </div>
+</section>
+
+<!-- REVEAL -->
+<section id="revealScreen">
+  <div class="blast">
+    <div class="msg">🎉 Happy Birthday 🎉</div>
+    <div class="msg">You make my world brighter</div>
+    <div class="msg">This day is all about YOU ❤️</div>
+  </div>
+</section>
+
+<!-- MUSIC -->
+<audio id="bgMusic" loop playsinline>
+  <source src="assets/music.mp3" type="audio/mpeg">
+</audio>
+
+
+<script src="script.js"></script>
+</body>
+</html>
