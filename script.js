@@ -208,21 +208,33 @@ touchCake.addEventListener("click", () => {
 
 document.addEventListener("DOMContentLoaded", () => {
   const elephant = document.getElementById("elephantImage");
-
   if (!elephant) {
     console.error("Elephant image not found!");
     return;
   }
 
-  // Initialize confetti/firework
-  const jsConfetti = new JSConfetti();
+  // Create fireworks instance
+  const container = document.getElementById('fireworks-container');
+  const fireworks = new Fireworks(container, {
+    maxRockets: 5,
+    rocketSpawnInterval: 150,
+    numParticles: 100,
+    explosionMinHeight: 0.2,
+    explosionMaxHeight: 0.9,
+    explosionChance: 0.08,
+    intensity: 30,
+    gravity: 1.2,
+    trace: 3,
+    friction: 0.95,
+    lineWidth: 3,
+    hue: { min: 0, max: 360 },
+    brightness: { min: 50, max: 80 },
+    decay: { min: 0.015, max: 0.03 },
+  });
 
-  // Click listener
   elephant.addEventListener("click", () => {
-    jsConfetti.addConfetti({
-      emojis: ['🎉','✨','🌙','💛','🎂'],
-      confettiNumber: 200,
-      emojiSize: 35
-    });
+    // Start fireworks for a short burst
+    fireworks.start();
+    setTimeout(() => fireworks.stop(), 2000); // stop after 2 seconds
   });
 });
