@@ -215,22 +215,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Create fireworks instance
   const container = document.getElementById('fireworks-container');
-  const fireworks = new Fireworks(container, {
-    maxRockets: 5,
-    rocketSpawnInterval: 150,
-    numParticles: 100,
-    explosionMinHeight: 0.2,
-    explosionMaxHeight: 0.9,
-    explosionChance: 0.08,
-    intensity: 30,
-    gravity: 1.2,
-    trace: 3,
-    friction: 0.95,
-    lineWidth: 3,
-    hue: { min: 0, max: 360 },
-    brightness: { min: 50, max: 80 },
-    decay: { min: 0.015, max: 0.03 },
-  });
+  const fireworks = new Fireworks.default(container); 
+
 
   elephant.addEventListener("click", () => {
     // Start fireworks for a short burst
@@ -238,3 +224,4 @@ document.addEventListener("DOMContentLoaded", () => {
     setTimeout(() => fireworks.stop(), 2000); // stop after 2 seconds
   });
 });
+
