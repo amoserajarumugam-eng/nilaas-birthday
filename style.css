@@ -248,6 +248,11 @@ body.night {
   z-index: 20;
 }
 
+.overlay, .hearts, canvas {
+  pointer-events: none;
+}
+
+
 
 
 
