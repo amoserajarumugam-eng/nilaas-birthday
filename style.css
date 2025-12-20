@@ -236,7 +236,7 @@ body.night {
 
 #cakeMessage {
   position: fixed;   /* 🔥 change this */
-  bottom: 250px;     /* increase/decrease to move up/down */
+  bottom: 200px;     /* increase/decrease to move up/down */
   left: 50%;
   transform: translateX(-50%);
   color: gold;
@@ -247,3 +247,4 @@ body.night {
   pointer-events: none;
   z-index: 20;
 }
+
