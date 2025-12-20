@@ -210,7 +210,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   console.log("JS loaded ✅");
 
-  const elephant = document.getElementById("elephant");
+  const elephant = document.getElementById("elephantImage");
 
   if (!elephant) {
     console.error("Elephant not found ❌");
@@ -232,3 +232,4 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
 });
+
