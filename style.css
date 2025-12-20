@@ -175,22 +175,6 @@ body.night {
 .box:active {
   transform: scale(0.96);
 }
-
-#cakeMessage {
-  position: fixed;   /* 🔥 change this */
-  bottom: 160px;     /* increase/decrease to move up/down */
-  left: 50%;
-  transform: translateX(-50%);
-  color: gold;
-  font-size: 1.3rem;
-  text-align: center;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  pointer-events: none;
-  z-index: 20;
-}
-
-
 /* mobile adjustment */
 @media (max-width: 480px) {
   #cakeMessage {
@@ -250,27 +234,16 @@ body.night {
   pointer-events: none;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+#cakeMessage {
+  position: fixed;   /* 🔥 change this */
+  bottom: 250px;     /* increase/decrease to move up/down */
+  left: 50%;
+  transform: translateX(-50%);
+  color: gold;
+  font-size: 1.3rem;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+  z-index: 20;
+}
