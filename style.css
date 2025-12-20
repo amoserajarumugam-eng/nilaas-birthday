@@ -220,21 +220,11 @@ body.night {
 }
 
 /* Elephant with simple board message in corner */
-/*
-#elephantContainer {
-  position: fixed;
-  bottom: 20px;  /* distance from bottom */
-  right: 180px;   /* distance from right */
-  width: 120px;
-  text-align: center;
-  z-index: 25;
-}*/
 
 #elephantContainer {
   position: fixed;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
+  bottom: 20px;  /* distance from bottom */
+  right: 160px;   /* distance from right */
   width: 120px;
   text-align: center;
   z-index: 25;
@@ -258,6 +248,7 @@ body.night {
   white-space: nowrap;
   pointer-events: none;
 }
+
 
 
 
