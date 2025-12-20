@@ -202,11 +202,9 @@ body.night {
   position: fixed;
   bottom: 40px;
   right: 05px;
-  left: 50%;
   transform: translateX(-50%);
   font-size: 4rem;
   cursor: pointer;
-  animation: pulseCake 1.2s infinite;
   z-index: 15;
 }
 
@@ -250,6 +248,7 @@ body.night {
   white-space: nowrap;
   pointer-events: none;
 }
+
 
 
 
