@@ -206,9 +206,17 @@ touchCake.addEventListener("click", () => {
   }, 10000); // visible for 5 seconds
 });
 
+// 👇 Create Confetti instance
+const jsConfetti = new JSConfetti()
 
+// 👇 Select the elephant image by ID (add id="elephant" in HTML if needed)
+const elephant = document.getElementById('elephant')
 
-
-
-
-
+elephant.addEventListener('click', () => {
+  // 🎉 Trigger confetti
+  jsConfetti.addConfetti({
+    emojis: ['✨', '🎉', '🌙', '💛'],
+    confettiNumber: 120,
+    emojiSize: 30,
+  })
+})
