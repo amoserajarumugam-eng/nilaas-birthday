@@ -177,8 +177,8 @@ body.night {
 }
 
 #cakeMessage {
-  position: absolute;
-  bottom: 500px; /* adjust so above cake, below timer */
+  position: fixed;
+  bottom: 200px; /* adjust so above cake, below timer */
   left: 50%;
   transform: translateX(-50%);
   color: gold;
@@ -248,6 +248,7 @@ body.night {
   white-space: nowrap;
   pointer-events: none;
 }
+
 
 
 
