@@ -225,7 +225,7 @@ body.night {
   bottom: 20px;  /* distance from bottom */
   right: 20px;   /* distance from right */
   width: 120px;
-  text-align: center;
+  text-align: left;
   z-index: 25;
 }
 
@@ -246,3 +246,4 @@ body.night {
   white-space: nowrap;
   pointer-events: none;
 }
+
