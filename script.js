@@ -135,18 +135,18 @@ document.addEventListener("touchend", (e) => {
   // Now, no action is taken
 });
 
-// Function to initialize Moon button
-function initMoonButton() {
-  const touchMoon = document.getElementById("touchMoon");
-  const moonMessage = document.getElementById("moonMessage");
+// Function to initialize Cake button
+function initCakeButton() {
+  const touchCake = document.getElementById("touchCake");
+  const cakeMessage = document.getElementById("cakeMessage");
 
-  touchMoon.addEventListener("click", () => {
+  touchCake.addEventListener("click", () => {
     const msg = messages[Math.floor(Math.random() * messages.length)];
-    moonMessage.textContent = msg;
-    moonMessage.style.opacity = 1;
+    cakeMessage.textContent = msg;
+    cakeMessage.style.opacity = 1;
 
     setTimeout(() => {
-      moonMessage.style.opacity = 0;
+      cakeMessage.style.opacity = 0;
     }, 3000);
   });
 }
@@ -156,8 +156,8 @@ setTimeout(() => {
   loader.style.display = "none";
   countdownScreen.style.display = "block";
 
-  // Initialize Moon button here
-  initMoonButton();
+  // Initialize Cake button here
+  initCakeButton();
 }, 1000);
 
 const messages = [
@@ -177,18 +177,18 @@ const messages = [
 ];
 
 
-const touchMoon = document.getElementById("touchMoon");
-const moonMessage = document.getElementById("moonMessage");
+const touchCake = document.getElementById("touchCake");
+const cakeMessage = document.getElementById("cakeMessage");
 
 let messageTimeout = null;
 
-touchMoon.addEventListener("click", () => {
+touchCake.addEventListener("click", () => {
   const msg = messages[Math.floor(Math.random() * messages.length)];
-  moonMessage.textContent = msg;
+  cakeMessage.textContent = msg;
 
   // show message
-  moonMessage.style.opacity = "1";
-  moonMessage.style.transition = "opacity 0.3s ease";
+  cakeMessage.style.opacity = "1";
+  cakeMessage.style.transition = "opacity 0.3s ease";
 
   // clear previous timeout so it doesn't vanish early
   if (messageTimeout) {
@@ -197,10 +197,11 @@ touchMoon.addEventListener("click", () => {
 
   // set the timeout again
   messageTimeout = setTimeout(() => {
-    moonMessage.style.opacity = "0";
+    cakeMessage.style.opacity = "0";
     messageTimeout = null;
   }, 10000); // visible for 5 seconds
 });
+
 
 
 
