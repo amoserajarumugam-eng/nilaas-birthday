@@ -206,19 +206,29 @@ touchCake.addEventListener("click", () => {
   }, 10000); // visible for 5 seconds
 });
 
-// 👇 Create Confetti instance
-const jsConfetti = new JSConfetti();
+document.addEventListener("DOMContentLoaded", () => {
 
-// 👇 Select the elephant image by ID (add id="elephant" in HTML if needed)
-const elephant = document.getElementById('elephantImage')
+  console.log("JS loaded ✅");
 
-elephant.addEventListener('click', () => {
-  // 🎉 Trigger confetti
-  jsConfetti.addConfetti({
-    emojis: ['✨', '🎉', '🌙', '💛'],
-    confettiNumber: 120,
-    emojiSize: 30,
-  })
-})
+  const elephant = document.getElementById("elephant");
 
+  if (!elephant) {
+    console.error("Elephant not found ❌");
+    return;
+  }
 
+  console.log("Elephant found 🐘");
+
+  const jsConfetti = new JSConfetti();
+
+  elephant.addEventListener("click", () => {
+    console.log("Elephant clicked 🎉");
+
+    jsConfetti.addConfetti({
+      emojis: ['🎉','✨','🌙','💛','🎂'],
+      confettiNumber: 150,
+      emojiSize: 32
+    });
+  });
+
+});
