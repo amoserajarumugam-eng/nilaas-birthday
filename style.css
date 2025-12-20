@@ -220,6 +220,8 @@ body.night {
   height: auto;
   pointer-events: none;
   animation: pulseCake 1.2s infinite;
+  z-index: 9999;
+  cursor: pointer;
 }
 
 #elephantBoardText {
@@ -251,6 +253,7 @@ body.night {
 .overlay, .hearts, canvas {
   pointer-events: none;
 }
+
 
 
 
