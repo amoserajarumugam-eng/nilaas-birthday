@@ -224,7 +224,7 @@ body.night {
 #elephantContainer {
   position: fixed;
   bottom: 20px;  /* distance from bottom */
-  right: 160px;   /* distance from right */
+  right: 120px;   /* distance from right */
   width: 120px;
   text-align: center;
   z-index: 25;
@@ -232,7 +232,7 @@ body.night {
 
 
 #elephantImage {
-  width: 180%;
+  width: 150%;
   height: auto;
   pointer-events: none;
   animation: pulseCake 1.2s infinite;
@@ -249,6 +249,7 @@ body.night {
   white-space: nowrap;
   pointer-events: none;
 }
+
 
 
 
