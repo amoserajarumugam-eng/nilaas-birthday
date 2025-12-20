@@ -174,6 +174,10 @@ const messages = [
   "Keep shining, playful Moon 🌙",
   "Every day is brighter with you around 💛",
   "You are my little sunshine 🌞",
+   "If smiles had a sound, yours would be my favorite 🎶",
+   "Moon's birthday loading… 🌙✨",
+   "Advance wishes for my favorite Moon 💛",
+   "Just a tiny early surprise 💛"
 ];
 
 
@@ -201,6 +205,7 @@ touchCake.addEventListener("click", () => {
     messageTimeout = null;
   }, 10000); // visible for 5 seconds
 });
+
 
 
 
