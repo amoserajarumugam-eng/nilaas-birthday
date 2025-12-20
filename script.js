@@ -208,32 +208,17 @@ touchCake.addEventListener("click", () => {
 
 document.addEventListener("DOMContentLoaded", () => {
   const elephant = document.getElementById("elephantImage");
-  if (!elephant) return console.error("Elephant not found!");
-
-  const container = document.getElementById("fireworks-container");
-  if (!container) return console.error("Fireworks container not found!");
-
-  // Use Fireworks.default for UMD build
-  const fireworks = new Fireworks.default(container, {
-    maxRockets: 5,
-    rocketSpawnInterval: 150,
-    numParticles: 100,
-    explosionMinHeight: 0.2,
-    explosionMaxHeight: 0.9,
-    intensity: 30,
-    gravity: 1.2,
-    trace: 3,
-    friction: 0.95,
-    lineWidth: 3,
-    hue: { min: 0, max: 360 },
-    brightness: { min: 50, max: 80 },
-    decay: { min: 0.015, max: 0.03 },
-  });
+  if (!elephant) {
+    console.error("Elephant image not found!");
+    return;
+  }
 
   elephant.addEventListener("click", () => {
-    fireworks.start();               // start firework blast
-    setTimeout(() => fireworks.stop(), 2000); // stop after 2 seconds
+    // a firework‑like burst in many directions
+    confetti({
+      particleCount: 200,
+      spread: 360,
+      origin: { y: 0.5 }
+    });
   });
 });
-
-
