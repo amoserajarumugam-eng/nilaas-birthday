@@ -207,28 +207,22 @@ touchCake.addEventListener("click", () => {
 });
 
 document.addEventListener("DOMContentLoaded", () => {
-
   const elephant = document.getElementById("elephantImage");
 
   if (!elephant) {
-    console.error("Elephant image not found");
+    console.error("Elephant image not found!");
     return;
   }
 
+  // Initialize confetti/firework
   const jsConfetti = new JSConfetti();
 
-  elephant.onclick = () => {
+  // Click listener
+  elephant.addEventListener("click", () => {
     jsConfetti.addConfetti({
       emojis: ['🎉','✨','🌙','💛','🎂'],
-      confettiNumber: 160,
-      emojiSize: 32
+      confettiNumber: 200,
+      emojiSize: 35
     });
-  };
-
+  });
 });
-
-
-
-
-
-
