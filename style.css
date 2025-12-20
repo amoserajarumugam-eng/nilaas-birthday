@@ -201,6 +201,7 @@ body.night {
 #touchCake {
   position: fixed;
   bottom: 40px;
+  right: 05px;
   left: 50%;
   transform: translateX(-50%);
   font-size: 4rem;
@@ -249,6 +250,7 @@ body.night {
   white-space: nowrap;
   pointer-events: none;
 }
+
 
 
 
