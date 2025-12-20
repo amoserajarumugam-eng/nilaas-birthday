@@ -208,7 +208,7 @@ touchCake.addEventListener("click", () => {
 
 document.addEventListener("DOMContentLoaded", () => {
 
-  const elephant = document.getElementById("elephant");
+  const elephant = document.getElementById("elephantImage");
   const jsConfetti = new JSConfetti();
 
   elephant.addEventListener("click", () => {
@@ -220,6 +220,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
 });
+
 
 
 
