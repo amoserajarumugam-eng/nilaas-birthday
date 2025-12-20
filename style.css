@@ -223,14 +223,14 @@ body.night {
 #elephantContainer {
   position: fixed;
   bottom: 20px;  /* distance from bottom */
-  right: 130px;   /* distance from right */
+  right: 150px;   /* distance from right */
   width: 120px;
   text-align: center;
   z-index: 25;
 }
 
 #elephantImage {
-  width: 130%;
+  width: 180%;
   height: auto;
   pointer-events: none;
 }
@@ -246,6 +246,7 @@ body.night {
   white-space: nowrap;
   pointer-events: none;
 }
+
 
 
 
