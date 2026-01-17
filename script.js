@@ -226,3 +226,12 @@ function showBirthdayText() {
   const text = document.getElementById("birthdayText");
   text.classList.remove("hidden");
 }
+
+window.addEventListener("load", () => {
+  const text = document.getElementById("birthdayText");
+  text.style.opacity = "0";
+  setTimeout(() => {
+    text.style.transition = "opacity 1.5s ease";
+    text.style.opacity = "1";
+  }, 800);
+});
