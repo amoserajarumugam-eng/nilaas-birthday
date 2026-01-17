@@ -222,3 +222,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+function showBirthdayText() {
+  const text = document.getElementById("birthdayText");
+  text.classList.remove("hidden");
+}
